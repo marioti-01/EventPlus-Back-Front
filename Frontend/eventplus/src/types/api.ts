@@ -8,7 +8,7 @@ export interface TipoUsuario {
     titulo: string;
 }
 
-export interface instituicao {
+export interface Instituicao {
     idInstituicao: string;
     cnpj: string;
     nomeFantasia: string;
@@ -29,10 +29,10 @@ export interface Evento {
     descricao: string;
     dataEvento: string;
     imagemUrl?: string | null;
-    idTipoEvento?:string | null;
+    idTipoEvento?: string | null;
     idInstituicao?: string | null;
     idTipoEventoNavigation?: TipoEvento | null;
-    idInstituicaoNavigation?: instituicao | null
+    idInstituicaoNavigation?: Instituicao | null;
 }
 
 export interface Comentario {
@@ -53,7 +53,7 @@ export interface Presenca {
     idEventoNavigation?: Evento | null;
 }
 
-export interface LoginPayload{
+export interface LoginPayload {
     email: string;
     senha: string;
 }
@@ -64,12 +64,11 @@ export interface LoginResponse {
     usuario: Usuario;
 }
 
-
 export interface AuthSession extends LoginResponse {
     usuario: Usuario;
 }
 
-export interface UsuarioPayload{
+export interface UsuarioPayload {
     nome: string;
     email: string;
     senha: string;
@@ -77,7 +76,7 @@ export interface UsuarioPayload{
 }
 
 export interface ComentarioPayload {
-    descricao:string;
+    descricao: string;
     idEvento: string;
     idUsuario: string | null;
 }
@@ -88,7 +87,7 @@ export interface PresencaPayload {
     idUsuario: string | null;
 }
 
-export interface MensagemModeracao{
+export interface MensagemModeracao {
     mensagem: string;
     motivo?: string;
 }
